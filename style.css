@@ -3,6 +3,10 @@
     padding: 0;
     font-family: 'Poppins', sans-serif;
 }
+main{
+    display: flex;
+    flex-direction: column;
+}
 /* ------style of header started------- */
 header{
     height: 677px;
@@ -70,9 +74,6 @@ h1{
     font-size: 64px;
     font-weight: 700;
     color: #fff;
-}
-.half-width{
-    background-color: indianred;
 }
 /* ------style of header ended------- */
 
@@ -151,9 +152,8 @@ button a{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 3%;
+    margin-top: 5%;
     margin-bottom: 5%;
-    background-color: slategray;
 }
 .about-highlight{
     width: 40%;
@@ -197,3 +197,20 @@ button a{
     text-align: center;
 }
 /* style of footer ended */
+
+/* responsive style */
+@media only screen and (max-width: 600px) {
+    nav{
+        display: none;
+    }
+    .banner{
+        flex-direction: column;
+    }
+    .banner-pic{
+        width:100%;
+    }
+    .key-players{
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+    }
+}
